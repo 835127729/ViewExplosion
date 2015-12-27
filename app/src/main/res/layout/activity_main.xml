@@ -1,0 +1,132 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    >
+    <TextView
+        android:id="@+id/text"
+        android:text="向下破碎"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/vx"
+            android:text="@string/hello_world"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:src="@drawable/qq"
+            android:text="@string/hello_world"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:src="@drawable/qq_music"
+            android:text="@string/hello_world"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:src="@drawable/qzone"
+            android:text="@string/hello_world"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_marginTop="20dp"
+        android:text="被风吹走"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:background="@android:color/holo_green_light"
+            android:src="@drawable/wb"
+            android:text="@string/hello_world"
+            android:layout_width="150dp"
+            android:layout_height="80dp" />
+        <ImageView
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/holo_green_light"
+            android:src="@drawable/p1"
+            android:text="@string/hello_world"
+            android:layout_width="150dp"
+            android:layout_height="80dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text3"
+        android:layout_marginTop="20dp"
+        android:text="竖直上升"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/p2"
+            android:text="@string/hello_world"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp" />
+        <ImageView
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/p3"
+            android:layout_weight="1"
+            android:text="@string/hello_world"
+            android:layout_width="0dp"
+            android:layout_height="80dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text4"
+        android:layout_marginTop="20dp"
+        android:text="分裂"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/p4"
+            android:text="@string/hello_world"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp" />
+        <ImageView
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/p5"
+            android:layout_weight="1"
+            android:text="@string/hello_world"
+            android:layout_width="0dp"
+            android:layout_height="80dp" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
