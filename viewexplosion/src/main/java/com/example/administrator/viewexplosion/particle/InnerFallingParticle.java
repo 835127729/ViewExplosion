@@ -5,8 +5,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 
-import com.example.administrator.myapplication.factory.FallingParticleFactory;
-import com.example.administrator.myapplication.factory.InnerFallingParticleFactory;
+
+import com.example.administrator.viewexplosion.factory.InnerFallingParticleFactory;
 
 import java.util.Random;
 

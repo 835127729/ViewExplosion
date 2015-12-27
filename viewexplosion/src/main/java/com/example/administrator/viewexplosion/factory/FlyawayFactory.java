@@ -3,9 +3,9 @@ package com.example.administrator.viewexplosion.factory;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 
-import com.example.administrator.myapplication.particle.BooleanParticle;
-import com.example.administrator.myapplication.particle.FlyawayParticle;
-import com.example.administrator.myapplication.particle.Particle;
+import com.example.administrator.viewexplosion.particle.FlyawayParticle;
+import com.example.administrator.viewexplosion.particle.Particle;
+
 
 /**
  * Created by Administrator on 2015/11/29 0029.

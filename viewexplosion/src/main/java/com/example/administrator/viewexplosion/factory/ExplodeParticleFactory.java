@@ -3,10 +3,10 @@ package com.example.administrator.viewexplosion.factory;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 
-import com.example.administrator.myapplication.Utils;
-import com.example.administrator.myapplication.particle.ExplodeParticle;
-import com.example.administrator.myapplication.particle.FlyawayParticle;
-import com.example.administrator.myapplication.particle.Particle;
+
+import com.example.administrator.viewexplosion.Utils;
+import com.example.administrator.viewexplosion.particle.ExplodeParticle;
+import com.example.administrator.viewexplosion.particle.Particle;
 
 import java.util.Random;
 

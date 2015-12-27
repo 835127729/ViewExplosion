@@ -6,7 +6,8 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 
-import com.example.administrator.myapplication.factory.FallingParticleFactory;
+
+import com.example.administrator.viewexplosion.factory.FallingParticleFactory;
 
 import java.util.Random;
 

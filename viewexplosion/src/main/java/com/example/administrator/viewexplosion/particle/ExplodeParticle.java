@@ -3,10 +3,9 @@ package com.example.administrator.viewexplosion.particle;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 
-import com.example.administrator.myapplication.factory.BooleanFactory;
-import com.example.administrator.myapplication.factory.ExplodeParticleFactory;
+import com.example.administrator.viewexplosion.factory.BooleanFactory;
+import com.example.administrator.viewexplosion.factory.ExplodeParticleFactory;
 
 import java.util.Random;
 

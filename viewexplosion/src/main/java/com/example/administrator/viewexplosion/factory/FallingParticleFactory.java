@@ -4,8 +4,9 @@ import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.Rect;
 
-import com.example.administrator.myapplication.particle.FallingParticle;
-import com.example.administrator.myapplication.particle.Particle;
+import com.example.administrator.viewexplosion.particle.FallingParticle;
+import com.example.administrator.viewexplosion.particle.Particle;
+
 
 /**
  * Created by Administrator on 2015/11/29 0029.

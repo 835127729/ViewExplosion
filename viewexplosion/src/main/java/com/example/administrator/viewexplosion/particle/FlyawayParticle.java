@@ -5,8 +5,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 
-import com.example.administrator.myapplication.factory.BooleanFactory;
-import com.example.administrator.myapplication.factory.FlyawayFactory;
+
+import com.example.administrator.viewexplosion.factory.FlyawayFactory;
 
 import java.util.Random;
 
