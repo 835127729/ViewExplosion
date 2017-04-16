@@ -1,4 +1,4 @@
-#简介
+# 简介
 最近在闲逛的时候，发现了一款**粒子爆炸特效**的控件，觉得比较有意思，效果也不错。
 但是代码不好扩展，也就是说如果要提供不同的爆炸效果，需要修改的地方比较多。于是我对源代码进行了一些**重构**，将爆炸流程和粒子运动分离。
 对于源码，大家可以参考以下链接
@@ -11,7 +11,7 @@
 实现效果如下：
 ![这里写图片描述](http://img.blog.csdn.net/20151202143834990)
 <br><br>
-#类设计
+# 类设计
 类设计图如下：
 ![这里写图片描述](http://img.blog.csdn.net/20151202145656706)
 
@@ -23,7 +23,7 @@
 > 
 > **Particle**，抽象的粒子类。代表粒子本身，必须拥有的属性包括，当前自己的**cx,cy坐标和颜色color**。必须实现两个方法，d**raw()方法选择怎么绘制自身**(圆形还是方形等),**caculate()计算当前时间，自己所处的位置**。
  <br><br>
-#控件的使用
+# 控件的使用
 控件使用很简单，首先要实现不同的爆炸效果，需要**给ExplosionField传入不同的ParticleFactory工厂**，产生不同的粒子。
 ```
 ExplosionField explosionField = new ExplosionField(this,new FallingParticleFactory());
@@ -36,8 +36,8 @@ explosionField.addListener(findViewById(R.id.layout1));
 这样就为两个控件添加了爆炸效果，注意**layout1代表的是一个viewgroup，那么我们就会为viewgroup中的每个view添加爆炸效果**。
 我们可以想象，**在ExplosionField的构造函数中，传入不同的ParticleFactory，就可以生成不同的爆炸效果。**
 <br><br>
-#爆炸实现思路
-##1、获取当前控件背景bitmap
+# 爆炸实现思路
+## 1、获取当前控件背景bitmap
 例如，例子中使用的是imageview，对于这个控件，我提供了一个**工具类**，可以获得其背景的Bitmap对象
 
 ```
@@ -71,7 +71,7 @@ public static Bitmap createBitmapFromView(View view) {
 
 上面的方法，简而言之，就是**将控件的Bitmap对象复制了一份，然后返回。**
 我们知道，**bitmap可以看成是一个像素矩阵，矩阵上面的点，就是一个个带有颜色的像素，于是我们可以获取每个点(未必需要每个)的颜色和位置，组装成一个对象Particle，这么一来，Particle就代表带有颜色的点了。**
-##2、将背景bitmap转换成Particle数组
+## 2、将背景bitmap转换成Particle数组
 获取Bitmap以后，我们交给ParticleFactory进行加工，根据Bitmap生产Particle数组。
 ```
 public abstract class ParticleFactory {
@@ -115,7 +115,7 @@ public class FallingParticleFactory extends ParticleFactory{
 其中**Rect类型的bound，是代表原来View控件的宽高信息**。
 根据我们设定的每个**粒子的大小**，和**控件的宽高**，我们就可以计算出，有多少个粒子组成这个控件的背景。
 我们取得每个粒子所在位置的颜色，位置，用于生产粒子，这就是FallingParticle。
-##3、生成爆炸场地，开始爆炸动画流程
+## 3、生成爆炸场地，开始爆炸动画流程
 **爆炸时需要场地的**，也就是绘制粒子的地方，我们通过给当前屏幕，添加一个覆盖全屏幕的ExplosionField来作为爆炸场地。
 
 ```
@@ -253,7 +253,7 @@ advance()方法里，其实调用了draw()方法和caculate()方法。
 <br>
 上面的实现，**其实是一个固定的流程，添加了爆炸场地以后，我们就开始从0数到1，在这个过程中，粒子会根据当前时间，绘制自己的位置，所以粒子的位置，其实是它自己决定的，和流程无关。**
 也就是说，我们只要用不同的算法，绘制粒子的位置即可，实现了流程和粒子运动的分离。
-##4、怎么运动？粒子自己最清楚
+## 4、怎么运动？粒子自己最清楚
 举个例子，gif图中，下落效果的粒子是这样运动的
 
 ```
@@ -294,7 +294,7 @@ protected void draw(Canvas canvas,Paint paint){
     }
 ```
 <br><br>
-#怎么扩展？
+# 怎么扩展？
 从上面的代码结构可以看出，**爆炸流程和粒子具体运动无关**，最重要的是，我们要**实现自己的caculate()方法，决定粒子的运动形态**。
 而不同的粒子可以由对应的工厂产生，所以要扩展爆炸特性，**只需要定义一个粒子类，和生成粒子类的工厂即可。**
 
